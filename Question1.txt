@@ -1,0 +1,28 @@
+
+package question1;
+
+import java.util.Scanner;
+
+
+public class Question1 {
+
+
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+             
+        System.out.print("This program prints surface area and volume \nof sphere for radii ranging from 10 to N, \nin increments of 10. Please input the value of N:");        //prompts user for the value of N
+        int n= in.nextInt();
+        
+        System.out.println("-----------------------------------");      //prints table header
+        System.out.println("\tSurface");
+        System.out.println("r \tArea\t\tVolume");
+        System.out.println("-----------------------------------");
+                
+        for(int i=10; i<=n; i+=10)
+        {       
+            
+            System.out.printf("%d \t%.2f \t%.2f\n", i,(4.0*Math.PI*Math.pow(i, 2)),(4.0/3.0*Math.PI*Math.pow(i, 3)));       //outputs surface area and volume
+        }
+    }
+}
